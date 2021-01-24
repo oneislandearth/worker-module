@@ -1,0 +1,61 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>@oneisland/workers example</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+    <style>
+      html, body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        background-color: #eef;
+      }
+      #title {
+        font: 700 26px Lato;
+        color: #443;
+        text-align: center;
+        margin: auto;
+        top: 40%;
+        position: relative;
+      }
+      #input {
+        font: 400 22px Lato;
+        color: #443;
+        padding: 5px;
+        width: 300px;
+        border: 1px solid #443;
+        background: #eff;
+        text-align: center;
+        margin: auto;
+        top: 42%;
+        position: relative;
+      }
+      #equals {
+        font: 700 26px Lato;
+        color: #443;
+        text-align: center;
+        margin: auto;
+        top: 44%;
+        position: relative;
+      }
+      #output {
+        font: 400 18px Lato;
+        color: #443;
+        text-align: center;
+        margin: auto;
+        top: 46%;
+        position: relative;
+      }
+    </style>
+  <body>
+    <p id="title">sqrt of</p>
+    <input id="input" type="number" min="1">
+    <p id="equals">equals</p>
+    <p id="output">computing...</p>
+    <script src="./app.js"></script>
+  </body>
+</html>

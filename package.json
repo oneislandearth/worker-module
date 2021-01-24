@@ -1,0 +1,33 @@
+{
+  "name": "@oneisland/worker-module",
+  "private": false,
+  "version": "0.0.1",
+  "description": "A simpler way of creating WebWorkers for any application",
+  "keywords": [
+    "workers",
+    "webworkers"
+  ],
+  "main": "index.js",
+  "dependencies": {
+    "@babel/parser": "^7.12.11",
+    "@oneisland/worker-module": "0.0.1",
+    "worker-loader": "^3.0.7"
+  },
+  "devDependencies": {
+    "webpack": "^5.17.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "homepage": "https://github.com/oneislandearth/worker-module#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oneislandearth/worker-module.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oneislandearth/worker-module/issues"
+  },
+  "contributors": [
+    "Daniel Larkin <daniel@oneisland.io>"
+  ],
+  "license": "MIT"
+}
