@@ -41,12 +41,10 @@ export class WorkerModule {
         // Call the method asyncronous
         Promise.resolve(worker.context[method](params)).then(payload => {
 
-          console.log(payload)
-
           // Send back the response payload
           worker.context.sendPayload({ method, params: payload, hash });
         });
       }
-    }
+    };
   }
 }

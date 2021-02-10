@@ -1,29 +1,12 @@
-# Symlinked .eslintrc.js
-.eslintrc*
+# Travis configuration
+.travis.yml
 
-# MacOS files
-.DS_Store
+# Eslint configuration
+.eslint
 
-# Node directories
-node_modules
-
-# Local env files
-.env.local
-.env.*.local
-
-# Log files
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Editor directories and files
-.idea
+# Vscode configuration
 .vscode
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw*
+jsconfig.json
 
-# Example output
+# Example files
 example

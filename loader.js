@@ -25,7 +25,7 @@ module.exports = (function() {
     const { program } = require('@babel/parser').parse(content, { sourceType: 'module' });
 
     // Iterate through the program body
-    for ({ declaration } of program.body) {
+    for (const { declaration } of program.body) {
 
       // Skip to the next node if it is not a declaration
       if (!declaration) continue;
@@ -40,7 +40,7 @@ module.exports = (function() {
           name = declaration.id.name;
 
           // Iterate through the module properties
-          for ({ key, kind } of declaration.body.body) {
+          for (const { key, kind } of declaration.body.body) {
 
             // Add the method to the methods
             if (kind == 'method') methods.push(key.name);
@@ -48,7 +48,7 @@ module.exports = (function() {
         }
       }
     }
-  }
+  };
 
   // Describe the pitch function
   const handlePitching = function(request) {
@@ -84,7 +84,7 @@ module.exports = (function() {
               type: 'Worker',
               options: { name }
             },
-            publicPath: publicPath,
+            publicPath,
             filename: path + filename,
             esModule: true
           },
@@ -99,7 +99,7 @@ module.exports = (function() {
       // Increment the stage
       stage = 1;
     }
-  }
+  };
 
   // Define the loader processing function
   const handleProcessing = function(content) {
@@ -123,7 +123,7 @@ module.exports = (function() {
 
       WorkerModule.create(${name});
     `;
-  }
+  };
 
   // Process the worker in the second round
   const processSecond = (content) => {
@@ -136,7 +136,7 @@ module.exports = (function() {
       constructor(params) {
 
         // Create the worker
-        this.worker = ${/(?:return )(.*)/g.exec(content)[1]};
+        this.worker = ${(/(?:return )(.*)/g).exec(content)[1]};
 
         // Create the inital context
         this.sendPayload({ method: 'createContext', params });
@@ -194,11 +194,11 @@ module.exports = (function() {
         this.worker.postMessage(JSON.stringify({ method, params, hash }));
       }
     }`;
-  }
+  };
 
   // Return the loader keys
   return {
     default: handleProcessing,
     pitch: handlePitching
-  }
+  };
 })();

@@ -15,7 +15,7 @@ const render = async({ target }) => {
 };
 
 // Set the value to a random value
-document.querySelector('#input').value = Math.floor(Math.random() * 10000 + 1)
+document.querySelector('#input').value = Math.floor(Math.random() * 10000 + 1);
 
 // Bind the event listener
 document.querySelector('#input').addEventListener('input', render);

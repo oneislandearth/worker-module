@@ -13,4 +13,4 @@ export class SquareRootWorker extends WorkerModule {
   calculate(number) {
     return Math.sqrt(number).toFixed(2);
   }
-}
+};

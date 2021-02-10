@@ -1,20 +1,24 @@
 {
   "name": "@oneisland/worker-module",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simpler way of creating WebWorkers for any application",
   "keywords": [
     "workers",
-    "webworkers"
+    "webworkers",
+    "module"
   ],
   "main": "index.js",
   "dependencies": {
     "@babel/parser": "^7.12.11",
-    "@oneisland/worker-module": "0.0.1",
     "worker-loader": "^3.0.7"
   },
   "devDependencies": {
-    "webpack": "^5.17.0",
+    "@babel/eslint-parser": "^7.12.13",
+    "eslint": "^7.19.0",
+    "eslint-plugin-vue": "^7.5.0",
+    "source-map-loader": "^2.0.0",
+    "webpack": "^5.20.1",
     "webpack-cli": "^4.4.0",
     "webpack-dev-server": "^3.11.2"
   },
